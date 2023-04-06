@@ -1,8 +1,8 @@
 export async function getGdp() {
-  return fetch('/api/gdp.json').then((response) => {
+  return import('../assets/gdp.json').then((response) => {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
-        resolve(response.json());
+        resolve(response.default);
       }, 600);
     });
   });
